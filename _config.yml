@@ -1,0 +1,16 @@
+# Site settings
+title: Egil Hansen's .com
+email: your-email@domain.com
+description: >
+  Software engineering, web design, Drupal, .net, etc...
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://egilhansen.com" # the base hostname & protocol for your site
+twitter_username: egilhansen
+github_username: egil
+
+# Build settings
+timezone: Europe/Copenhagen
+markdown: kramdown
+
+kramdown:
+  input: GFM
