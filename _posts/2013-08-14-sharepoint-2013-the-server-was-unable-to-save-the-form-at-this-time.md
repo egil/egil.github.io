@@ -3,7 +3,7 @@ layout: post
 title: 'SharePoint 2013: The server was unable to save the form at this time'
 created: 1376474695
 redirect_from:
-  - /2013/08/14/sharepoint-2013-server-was-unable-save-form-time
+  - /2013/08/14/sharepoint-2013-server-was-unable-save-form-time/
 ---
 This morning our freshly installed SharePoint Server 2013 server was refusing to let me save a simple form with a Lookup column to another list. Using the standard insert/edit form, the error message read:
 
