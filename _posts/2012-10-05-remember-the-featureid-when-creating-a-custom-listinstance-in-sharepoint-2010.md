@@ -7,6 +7,8 @@ redirect_from:
 ---
 When creating a list instance manually in a SharePont 2010, it is important to remember to add the right `FeatureId` attribute to the [ListInstance]( http://msdn.microsoft.com/en-us/library/ms476062.aspx) element, if the `TemplateType` attribute points to a list template which is not in the same feature as the one you are creating the list instance in. If you forget, you will get some very vague error messages.
 
+<!--break-->
+
 I was creating a list instance with a custom schema attached and when I tried to deploy I got this error message:
 
 > Error occurred in deployment step 'Activate Features': Invalid file name.

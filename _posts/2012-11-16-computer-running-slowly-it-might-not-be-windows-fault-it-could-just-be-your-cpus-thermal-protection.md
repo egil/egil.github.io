@@ -9,6 +9,8 @@ redirect_from:
 ---
 Conventional wisdom says that when a PC starts to run slowly and angry screaming at the computer screen ensues, it is time to reinstall Windows or remove some of the crap-ware that's been building up on the PC. However, it could be a hardware issue; it could be the computers cooling system that is unable to dissipate heat from the processor probably, causing the processors to lower its speed to 50% or more (see [Intel's description of this processor feature for more details](http://www.intel.com/cd/ids/developer/asmo-na/eng/downloads/54118.htm)).
 
+<!--break-->
+
 ## Background
 This happened to me last summer with my then Dell Precision M2400, a "workstation laptop", about a year old at the time. If I put the CPU under a relatively heavy load, i.e. working with Visual Studio, Photoshop, while watching a YouTube video, the system would after a little while become very sluggish, ending up in a usable state, where even scrolling was laggy. I started playing around and figured out I could get this to happen within minutes by just using [7-Zip](http://www.7-zip.org/) to compress a 6GB virtual machine. Usually, it would take complete shutdown of the computer for a 10-20 minutes before it would run normally again. After consulting Dell Support and trying various solutions, it was clear that this was not caused by any software. Even disabling [SpeedStep](http://en.wikipedia.org/wiki/SpeedStep) in the bios did not help.
 

@@ -4,7 +4,9 @@ title: Quake dueling guide
 created: 1169973448
 ---
 Back in October 2005 when Quake 4 was about to be released I decided to write a guide to dueling in Quake. A few years back I was dueling on a fairly high level (at least by Danish standards) in Quake 3 and besides having some experience to share I also though an article like that would help build a good Quake dueling community in Denmark again, by helping aspiring Quakers get some tools to work on their game and not give up right away.
- 
+
+<!--break-->
+
 I actually never started playing Quake again when Quake 4 was released, largely due to time constraints but definitely also because my computer couldn't deliver the performance needed to run the game decently, so I'm unsure how much my article actually helped.
  
 The article was originally posted on [XplayN.com](http://xplayn.com/) -- the biggest Counter Strike community back then, but since it's nowhere to be found now, I thought I would repost it here. Unfortunately it's only in Danish, but I hope some of you might find it an interesting read.

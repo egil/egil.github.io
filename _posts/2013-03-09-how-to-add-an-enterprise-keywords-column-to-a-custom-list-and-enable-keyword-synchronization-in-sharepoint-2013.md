@@ -7,6 +7,7 @@ redirect_from:
   - /2013/03/09/how-add-enterprise-keywords-column-custom-list-and-enable-keyword-synchronization
 ---
 This is a quick step-by-step guide to add an Enterprise Keywords column to a custom list and enable Keyword synchronization with Visual Studio 2012 in a SharePoint project. The SharePoint tools for Visual Studio 2012 have become a lot better in the latest edition, but a little extra work is required to get the Enterprise keywords column wired up correctly.
+
 <!--break-->
 
 **Step 1:** Create an empty SharePoint 2013 project.

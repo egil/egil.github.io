@@ -7,6 +7,8 @@ redirect_from:
 ---
 To install SharePoint Foundation 2010 on Windows 7/8, you need to modify the config.xml file. However, after extracting the setup files, the config.xml file was nowhere to be seen in the Setup folder. To get the installation going, I had to create the file myself. Here is the content that goes into it:
 
+<!--break-->
+
 ~~~XML
 <Configuration>
    <Package Id="sts">

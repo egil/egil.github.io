@@ -8,6 +8,8 @@ redirect_from:
 ---
 Getting [TypeScript](http://www.typescriptlang.org/), [RequireJS](http://requirejs.org/), and [Jasmine](http://pivotal.github.com/jasmine/) playing nicely together in Visual Studio turned out to be a bit harder than I had hoped.
 
+<!--break-->
+
 My first attempt with [Chutzpah](http://visualstudiogallery.msdn.microsoft.com/71a4e9bd-f660-448f-bd92-f5a65d39b7f0) was not super successful, I did not manage to get it running without output errors. Then I tried using Resharper, but since the current version (7.1) has a bug that prevents the test session from ending properly when all tests have been executed, I went with a modified version of the "specrunner" that Jasmine is shipped with.
 
 To make it easy to get started, I have [demo project up on GitHub](https://github.com/egil/TypeScript-RequireJs-Jasmine) that have everything setup and is ready to run.

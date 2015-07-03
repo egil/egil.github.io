@@ -7,6 +7,8 @@ redirect_from:
 ---
 To make it easier for me to unit test a [OData JavaScript library](http://github.com/egil/ODataJS) I am working, I created a small HTTP handler that will reply back to a AJAX request with the headers, HTTP verb and query string it received. My initial thought was to do this through a WCF service, and while this is certainly possible, I found it much easier just to create a simple HTTP handler.
 
+<!--break-->
+
 The code for the *AjaxPingHandler.cs* handler:
 
 ~~~csharp

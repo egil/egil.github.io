@@ -7,6 +7,8 @@ redirect_from:
 ---
 Sometimes very simple formulas like `=IF([Column1]<=[Column2], "OK", "Not OK")` can result in the unhelpful <cite>"The formula contains a syntax error or is not supported"</cite> error message, even though the formula in the example is perfectly valid according to the [documentation]( http://office.microsoft.com/en-001/windows-sharepoint-services-help/examples-of-common-formulas-HA001160947.aspx), it still wont accept it.
 
+<!--break-->
+
 ## The solution is in the comma ##
 It turns out that a SharePoint sites regional setting changes the meaning of the comma (,) in the formula syntax. The solution is simple (if you know it): **Just use a semi colon instead (;)**.
 

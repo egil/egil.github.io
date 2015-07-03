@@ -5,6 +5,8 @@ created: 1361445197
 ---
 Running [Drupal](http://drupal.org/) on a shared host usually imply you only have access to the webserver through FTP, i.e. no [Drush](http://drush.ws/) or SSH to ease the upgrade process. The [official upgrade instructions](http://api.drupal.org/api/drupal/UPGRADE.txt/7) assumes you have shell access to your server.
 
+<!--break-->
+
 With the frequent security updates to Drupal, it quickly becomes tedious to first delete every file in your Drupal directory on the server (except the `sites` directory of course), then upload the +1000 files in the latest release, all while your website is offline. Depending on your connection to your shared host, it can take a little while to complete the deleting and uploading process.
 
 ## Solution: Use FTP commands to save time

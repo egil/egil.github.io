@@ -8,6 +8,8 @@ redirect_from:
 ---
 Today I was looking at [Ukadc.Diagnostics](http://ukadcdiagnostics.codeplex.com/), an extension to the [System.Diagnostics namespace](http://msdn.microsoft.com/en-us/library/system.diagnostics.aspx), and decided to build a test website myself to get more familiar with it. After reading through [Ukadc.Diagnostics Reference Example](http://www.codeplex.com/UkadcDiagnostics/Wiki/View.aspx?title=QuickReferenceExample&referringTitle=Home) I thought it would be a homerun in the first try, but it turns out that without adding `compilerOptions="/d:TRACE"` to each compiler in the compilers section in the Web.config, the tracing code is never compiled into the assemblies at runtime. Needless to say, I was scratching my head since my sample console application worked as expected the first time.
 
+<!--break-->
+
 My compilers section ended up looking like this (it is located in the system.codedom section):
 
 ```

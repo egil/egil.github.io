@@ -11,6 +11,8 @@ redirect_from:
 
 If you are using input filters such as the [Markdown filter module](http://drupal.org/project/markdown), you may run in to a situation where the script behind the module does not provide you with all the formatting options you want.
 
+<!--break-->
+
 This was the case for me with a Drupal site I am currently building, I wanted to allow the editors of the site to specify the position of the image, i.e. float left, float right, or centered, but this is not supported by the otherwise [excellent Markdown syntax](http://daringfireball.net/projects/markdown/syntax), so I decided to use the [Custom filter module](http://drupal.org/project/customfilter) to solve my problem.
 
 Another option is to hack the Markdown module or Markdown itself, but neither is a good option as newer versions of either could break the hack. The solution with the Customer filter module does not do this, since it just adds a new filter that can be applied after the Markdown filter. Straight from the Custom filter page:

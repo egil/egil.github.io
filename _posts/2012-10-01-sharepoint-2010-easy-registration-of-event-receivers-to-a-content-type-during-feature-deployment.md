@@ -8,6 +8,8 @@ redirect_from:
 ---
 When registering a custom event receiver to a content type during a feature deployment using the [SPEventReceiverDefinition class](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.speventreceiverdefinition.aspx), you need the full assembly name and the full class name. However, during development, it can be tedious to keep track of the assembly names, so to make things easier we can just grap it using the [typeof operator](http://msdn.microsoft.com/en-us/library/58918ffs(v=vs.110).aspx). This small reusable helper method makes this easy:
 
+<!--break-->
+
 RegisterContentTypeEventReceiver() helper method:
 
 ~~~csharp

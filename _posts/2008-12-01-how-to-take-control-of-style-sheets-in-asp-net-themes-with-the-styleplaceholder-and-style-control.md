@@ -10,6 +10,8 @@ The problem is pretty simple. When using ASP.NET Themes you do not have much say
 
 The render engine adds all the style sheets you have in your themes folder in alphabetic order, using the `<link href="..."` notation.
 
+<!--break-->
+
 We all know the order of the style sheets are important, luckily asp.net's shortcomings can be circumvented by prefixing the style sheets with 01, 02, ... , 99, and thus forcing the order you want (see [Rusty Swayne blog post](http://rustyswayne.com/post.aspx?id=cba116ea-b672-4c90-9f4e-18b70ca2f50a) on the technique for more information).
 
 This is especially important if you use a reset style sheet, which I highly recommend; it makes it much easier to style a site in a consistent form across browsers (take a look at [Reset Reloaded from Eric Meyer](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/)).

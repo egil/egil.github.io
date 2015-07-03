@@ -7,17 +7,52 @@ layout: default
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        {{ post.excerpt }}
+        <p class="post-links">
+          {% capture content_words %} 
+            {{ post.content | number_of_words }} 
+          {% endcapture %} 
+          {% capture excerpt_words %} 
+            {{ post.excerpt | number_of_words }} 
+          {% endcapture %} 
+          {% if excerpt_words != content_words %}
+            <a href="{{ post.url }}" title="Read more: {{ post.title }} ">Read more</a> - 
+          {% endif %}
+          <a href="{{ post.url }}#disqus_thread" title="See comments">Comments</a>
+        </p>
       </li>
     {% endfor %}
   </ul>
 
+  {% if paginator.total_pages > 1 %}
+  <p class="pager">
+    {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous page</a>
+    {% endif %} 
+    {% if paginator.previous_page and paginator.next_page %}-{% endif %}
+    {% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next page &rarr;</a>
+    {% endif %}
+  </p>
+  {% endif %}
+
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'egilhansen';
+    var disqus_developer = 1; // Comment out when the site is live
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>

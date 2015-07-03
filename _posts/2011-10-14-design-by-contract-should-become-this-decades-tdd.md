@@ -7,6 +7,8 @@ redirect_from:
 ---
 I am currently taking CSE 218 at UCSD, "Advanced Topics in Software Engineering - Methods and Tools for Software Modularity", where we recently read the paper ["Applying 'Design by Contract'"](http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=161279) by Bertrand Meyer. I already knew a little about the concept, and after reading that paper and playing with the concept in a micro project, I am sold.  I really think Design by Contract has a chance at being this decades TDD. It is pretty clear to me why it is a good idea to do "Contract First" development. Let me try to explain why.
 
+<!--break-->
+
 For me, at least, when developing a new class or module, no matter if there is a detailed interface contract or design document in place or I am gong-ho-agile-styling it, it is an iterative process, where I add one bit of functionality after the other as I go. Most of the time, unless it's just a simple utility library, there is state involved, and at the time I add the local variable to hold a state, I also find myself trying to restrict that variable as much as possible with various parameters, modifiers, checks, encapsulation, etc., to prevent the state of the object from going bad. That process of preventing bad state never really stops until all functionality that deals with that state is added, which is tedious and error prone.
 
 Enter code contracts. When I declare my local state variable, I also declare my class invariants for it, in the same way we create unit tests to verify our code, before I start adding functionality to manipulate the state. The benefits are obvious to me:

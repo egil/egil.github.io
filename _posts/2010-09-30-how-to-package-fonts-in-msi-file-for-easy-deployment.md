@@ -8,6 +8,8 @@ redirect_from:
 ---
 In this tutorial I will show you how to package custom font(s) into a Windows Installer .msi package for easy deployment to computers in a network through Active Directory. Alternatives is to use a VBscript solution or batch file solution, but I like this solution better as it allows me to deploy it through a AD group policy, it will automatically ensure that the fonts is only installed once, and should I ever want to remove the fonts from all the computers again, it is just a matter of updating my AD group policy. The Windows Installer technology handles the rest.
 
+<!--break-->
+
 Lets get started . . .
 
 **Step 1:** Install the font you want to distribute on your own computer, using the regular method through the Control Panel. This will create all the required registry entries that we will need later. In this example I will be using the [Judson](http://openfontlibrary.org/files/Daniel_J/219) fonts by [Daniel_J](http://openfontlibrary.org/people/Daniel_J). The font files are named: *Judson.otf*, *JudsonBold.otf*, and *JudsonItalic.otf*.

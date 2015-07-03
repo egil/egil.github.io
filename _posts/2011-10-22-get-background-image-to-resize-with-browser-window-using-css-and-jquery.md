@@ -7,6 +7,8 @@ redirect_from:
 ---
 Using a photo as a background for a web page can look pretty good, but making that photo fill out the entire browser window no matter its size and proportions is not straight forward, if you also want to keep the photo in its original aspect ratio. Not clear what I mean -- check out the [demo page](/assets/auto-resize-background-image-demo.html) to see the effect in action (try resizing it).
 
+<!--break-->
+
 Some of the new [CSS3 tricks come pretty close](http://www.css3.com/css3-background-size/), but they still seem to lack the ability to let the user expand the browser window in any direction and also keep the photos aspect ratio. If we also want a solution that works with older browsers (e.g. IE7/IE8), we need to go a different route.
 
 ## jQuery to the rescue

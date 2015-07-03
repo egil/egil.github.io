@@ -7,6 +7,8 @@ redirect_from:
 ---
 This morning our freshly installed SharePoint Server 2013 server was refusing to let me save a simple form with a Lookup column to another list. Using the standard insert/edit form, the error message read:
 
+<!--break-->
+
 {% include figure.html src="sharepoint-error-message-form.gif" caption="Error message from insert/edit form: *The server was unable to save the form at this time. Please try again.*" %}
 
 When using the quick edit mode, the error message was:

@@ -8,6 +8,8 @@ redirect_from:
 ---
 After reading [Scott Mitchell's article Using Coordinated Universal Time (UTC) to Store Date/Time Values](http://aspnet.4guysfromrolla.com/articles/081507-1.aspx), I decided to do as he suggest and use UTC for a web application I'm building at work. All in all it is fairly easy to deal with UTC in the .NET Framwork. There is a [DateTime.UtcNow](http://msdn2.microsoft.com/en-us/library/system.datetime.utcnow.aspx) you can use instead of the regular DateTime.Now property, and there is a [DateTime.ToLocalTime](http://msdn2.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx) method that will convert your UTC DateTime value to the local server time zone, even taking daylight savings time in to consideration. When converting the other way, the [DateTime.ToUniversalTime](http://msdn2.microsoft.com/en-us/library/system.datetime.touniversaltime.aspx) method is provided.
 
+<!--break-->
+
 With MsSQL's getutcdate() function (instead of getdate()), just about everything is smooth sailing. The only problem I have encountered is when binding a to a ASP.NET server control. Scott suggests doing like this:
 
 ```csharp
