@@ -6,18 +6,19 @@ created: 1361445197
 Running [Drupal](http://drupal.org/) on a shared host usually imply you only have access to the webserver through FTP, i.e. no [Drush](http://drush.ws/) or SSH to ease the upgrade process. The [official upgrade instructions](http://api.drupal.org/api/drupal/UPGRADE.txt/7) assumes you have shell access to your server.
 
 With the frequent security updates to Drupal, it quickly becomes tedious to first delete every file in your Drupal directory on the server (except the `sites` directory of course), then upload the +1000 files in the latest release, all while your website is offline. Depending on your connection to your shared host, it can take a little while to complete the deleting and uploading process.
-<!--break-->
-##Solution: Use FTP commands to save time##
+
+## Solution: Use FTP commands to save time
 To save time and make the upgrade process go a little faster, we can use FTP commands to move directories around on the webserver, instead of deleting and uploading files. This allows us to keep a backup of our old Drupal installation without having to download it, and it limits the time our website is offline during the upgrade process.
 
-The following guide assumes you have a directory structure similar to this on your webserver, otherwise modify as needed, and we will use Drupal 7.20 as the upgrade target, again, modify as needed when upgrading to a different version:
-===
+The following guide assumes you have a directory structure similar to this on your webserver, otherwise modify as needed, and we will use Drupal 7.20 as the upgrade target, again, modify as needed when upgrading to a different version.
+
 ```
 /
 /www
 /www/sites
 ```
-===[`/` is the FTP root. `/www` is the websites root directory, e.g. the directory where the Drupal installation resides. `/www/sites` is the location of the `sites` directory.]
+
+`/` is the FTP root. `/www` is the websites root directory, e.g. the directory where the Drupal installation resides. `/www/sites` is the location of the `sites` directory.
 
 **Note:** This only works if you have permissions to rename the your websites root directory, e.g. `www`, AND you can create new directories on the same level or higher as your websites root directory.
 

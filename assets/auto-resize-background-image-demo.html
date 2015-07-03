@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Demo: Get background image to resize with browser window using CSS and JQuery</title>
+  <link href="http://google-code-prettify.googlecode.com/svn/trunk/styles/sunburst.css"
+    rel="stylesheet" type="text/css">
+  <style type="text/css">
+
+    html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+    body {
+      font-family: sans-serif;
+      margin: 0; font-size: 13px; line-height: 1.231;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+
+    header { margin-bottom: 20px; }
+    header h1 { font-size: 145%; }
+
+    #container {
+      background: #111;
+      background: rgba(0,0,0,.75);
+      margin: 20px auto;
+      padding: 20px;
+      width: 600px;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    #container a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #container a:hover {
+      color: #ccc;
+    }
+
+    #main {
+      text-align: left;
+    }
+
+    pre.prettyprint {
+      background:rgba(0,0,0,.3);
+    }
+
+    #bgimgwrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #bgimg {
+      display: block;
+      -ms-interpolation-mode: bicubic;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1>Demo: Get background image to resize with browser window using CSS and JQuery</h1>
+      <a href="/node/29">... go back to story.</a>
+    </header>
+    <div id="main" role="main">
+
+<p>The CSS code:</p>
+<pre class="prettyprint"><code>#bgimgwrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bgimg {
+  -ms-interpolation-mode: bicubic;
+  display: block;
+}</code></pre>
+
+<p>The HTML code:</p>
+
+<pre class="prettyprint"><code>&lt;div id="bgimgwrapper"&gt;
+  &lt;img alt="" src="photo.jpg" id="bgimg" style="width: 100%;" /&gt;
+&lt;/div&gt;</code></pre>
+
+<p>And the jQuery that glues it all together:</p>
+
+<pre class="prettyprint"><code>(function($){
+  var pr = 0, bgWidth = true, bgResize;
+
+  bgResize = function(){
+    var wr = $(window).width() / $(window).height();
+
+    if(wr > pr && !bgWidth) {
+      $('#bgimg').css('width', '100%').css('height', '');
+      bgWidth = true;
+    } else if(wr < pr && bgWidth) {
+      $('#bgimg').css('height', '100%').css('width', '');
+      bgWidth = false;
+    }
+  };
+
+  $(document).ready(function() {
+    var img = $('#bgimg');
+    if(img.height()) {
+      pr = $('#bgimg').width() / $('#bgimg').height();
+      bgResize();
+    } else {
+      img.load(function(){
+        pr = $('#bgimg').width() / $('#bgimg').height();
+        bgResize();
+      });
+    }
+
+    $(window).resize(bgResize);
+
+  });
+})(jQuery);</code></pre>
+
+    </div>
+  </div> <!--! end of #container -->
+
+  <div id="bgimgwrapper"><img alt="" src="photo.jpg" id="bgimg" style="width: 100%;" /></div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script src="//google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+
+  <script>
+    (function($){
+      var pr = 0, bgWidth = true, bgResize;
+
+      bgResize = function(){
+        var wr = $(window).width() / $(window).height();
+
+        if(wr > pr && !bgWidth) {
+          $('#bgimg').css('width', '100%').css('height', '');
+          bgWidth = true;
+        } else if(wr < pr && bgWidth) {
+          $('#bgimg').css('height', '100%').css('width', '');
+          bgWidth = false;
+        }
+      };
+
+      $(document).ready(function() {
+        var img = $('#bgimg');
+        if(img.height()) {
+          pr = $('#bgimg').width() / $('#bgimg').height();
+          bgResize();
+        } else {
+          img.load(function(){
+            pr = $('#bgimg').width() / $('#bgimg').height();
+            bgResize();
+          });
+        }
+
+        $(window).resize(bgResize);
+        prettyPrint();
+      });
+    })(jQuery);
+  </script>
+
+</body>
+</html>

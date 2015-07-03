@@ -3,6 +3,8 @@ layout: post
 title: How to add an Enterprise Keywords column to a custom list and enable Keyword
   synchronization in SharePoint 2013
 created: 1362846664
+redirect_from:
+  - /2013/03/09/how-add-enterprise-keywords-column-custom-list-and-enable-keyword-synchronization
 ---
 This is a quick step-by-step guide to add an Enterprise Keywords column to a custom list and enable Keyword synchronization with Visual Studio 2012 in a SharePoint project. The SharePoint tools for Visual Studio 2012 have become a lot better in the latest edition, but a little extra work is required to get the Enterprise keywords column wired up correctly.
 <!--break-->
@@ -11,7 +13,6 @@ This is a quick step-by-step guide to add an Enterprise Keywords column to a cus
 
 **Step 2:** Add *Content Type* and add these three columns to it manually through the *Elements.xml* file or through the graphical interface:
 
-===
 ```xml
 <FieldRef ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" 
 	DisplayName="$Resources:osrvcore,field_KeywordsFieldName" 
@@ -34,11 +35,9 @@ This is a quick step-by-step guide to add an Enterprise Keywords column to a cus
 	Sealed="TRUE" 
 	Sortable="FALSE" />
 ```
-===[The three columns needed to add the Enterprise Keywords column to a content type.]
 
 **Step 3:** Add a *List* to the project; add the custom content type you created previously content. Alternatively, if you already have an existing list, add these fields definitions inside the `<Fields>` tag in lists *Schema.xml* file:
 
-===
 ```xml
 <Field Type='TaxonomyFieldTypeMulti'
   DisplayName='Enterprise Keywords'
@@ -160,7 +159,6 @@ This is a quick step-by-step guide to add an Enterprise Keywords column to a cus
   AllowDeletion="TRUE" 
   Sealed="TRUE" />
 ```
-===[These `<Field>` definitions should be added inside the `<Fields>` tag in lists *Schema.xml* file.]
 
 At this point, we are usually done. The columns were added to the list definition and the columns does indeed show up in the list. However, they keywords added to items in the list does not show up. What is missing is the event receiver that takes care of the keyword synchronization. We will add that now.
 
@@ -172,7 +170,6 @@ Aside: I like to add event receivers beneath the list they are associated with s
 
 **Step 6:** Open the event receiver's *Elements.xml* file and replace whatever `<Receiver>` tags where generated with these:
 
-===
 ```xml
 <Receiver>
 	<Name>TaxonomyItemSynchronousAddedEventReceiver</Name>
@@ -193,7 +190,6 @@ Aside: I like to add event receivers beneath the list they are associated with s
 	<Data></Data>
 </Receiver>
 ```
-===[These event receiver definitions should be placed inside the `<Receivers>` tag in the event receiver's *Elements.xml* file.]
 
 The important thing to make sure is that the value of the `ListTemplateId` attribute on the `<Receivers ListTemplateId="xxxxx"> ... </Receivers>` tag is the same as the value of the ` Type="xxxxx"` attribute on the `< ListTemplate ... />` tag. Otherwise the event receivers will not attach to the right list.
 

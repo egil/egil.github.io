@@ -2,6 +2,8 @@
 layout: post
 title: 'CSS trick: Always show scrollbars'
 created: 1175069795
+redirect_from:
+  - /2011/09/27/css-trick-always-show-scrollbars
 ---
 **Update 2011:** Since Internet Explorer now always just display a vertical scrollbar, all that is needed to force a scrollbar in all other non-IE browsers is this:
 

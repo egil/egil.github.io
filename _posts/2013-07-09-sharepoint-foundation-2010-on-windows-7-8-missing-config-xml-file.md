@@ -2,6 +2,8 @@
 layout: post
 title: SharePoint Foundation 2010 on Windows 7/8 – missing config.xml file
 created: 1373358114
+redirect_from:
+  - /2013/07/09/sharepoint-foundation-2010-windows-7-8-missing-configxml-file
 ---
 To install SharePoint Foundation 2010 on Windows 7/8, you need to modify the config.xml file. However, after extracting the setup files, the config.xml file was nowhere to be seen in the Setup folder. To get the installation going, I had to create the file myself. Here is the content that goes into it:
 

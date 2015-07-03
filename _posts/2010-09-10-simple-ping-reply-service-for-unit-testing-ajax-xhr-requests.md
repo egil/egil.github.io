@@ -2,10 +2,13 @@
 layout: post
 title: Simple Ping/Reply Service for Unit Testing AJAX/XHR requests
 created: 1284089210
+redirect_from:
+  - /2010/09/09/simple-ping-reply-service-unit-testing-ajax-xhr-requests
 ---
 To make it easier for me to unit test a [OData JavaScript library](http://github.com/egil/ODataJS) I am working, I created a small HTTP handler that will reply back to a AJAX request with the headers, HTTP verb and query string it received. My initial thought was to do this through a WCF service, and while this is certainly possible, I found it much easier just to create a simple HTTP handler.
 
-===
+The code for the *AjaxPingHandler.cs* handler:
+
 ~~~csharp
 using System.IO;
 using System.Linq;
@@ -50,13 +53,13 @@ namespace ODataJS.services
     }
 }
 ~~~
-===[The code for the *AjaxPingHandler.cs* handler.]
 
 As you can see, it uses the native .net [DataContractJsonSerializer](http://msdn.microsoft.com/en-us/library/system.runtime.serialization.json.datacontractjsonserializer.aspx) to serialize a custom class called PingReply. The ContentType return header is determined by the AcceptTypes request header. If the AcceptTypes array contains "application/json" the ContentType header is set to the same, otherwise we set the ContentType header to "text/javascript".
 
 Just for good measure, the result data is wrapped in a dummy object `{ "d" : . }`, just like .net's JSON enabled services does it. It is not because I am terrible worried about script injection attacks when doing unit tests, but it makes the service behave more like other .net JSON services, which makes things consistent.
 
-===
+The *PingReply.cs* class:
+
 ~~~csharp
 using System.Linq;
 using System.Runtime.Serialization;
@@ -91,11 +94,11 @@ namespace ODataJS.services
     }
 }
 ~~~
-===[The *PingReply.cs* class.]
 
 The only thing interesting about the PingReply class is that it uses the JsonDictionary class to return the headers and query string instead of the native .net Dictionary collection class. I decided to use the JsonDictionary class because it serializes to a proper JavaScript object, and not a array of one-element objects like the .net Dictionary. [Carlos Figueira](http://social.msdn.microsoft.com/profile/carlos%20figueira/) first published the JsonDictionary class over at the [msdn forums](http://social.msdn.microsoft.com/Forums/en-US/wcf/thread/8bef40bc-8466-4c6f-a717-15f3d6e61e3c).
 
-===
+The *JsonDictionary.cs* class:
+
 ~~~csharp
 using System;
 using System.Collections.Generic;
@@ -131,11 +134,10 @@ namespace ODataJS.services
     }
 }
 ~~~
-===[The *JsonDictionary.cs* class.]
 
 To make it all work, you simply need to add the following to your web.config file:
 
-~~~
+~~~xml
 <configuration>
   <system.web>
     <httpHandlers>

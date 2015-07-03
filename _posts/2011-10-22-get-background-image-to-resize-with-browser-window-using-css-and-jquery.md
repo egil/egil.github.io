@@ -2,10 +2,12 @@
 layout: post
 title: Get background image to resize with browser window using CSS and jQuery
 created: 1319268101
+redirect_from:
+  - /2011/10/22/get-background-image-resize-browser-window-using-css-and-jquery
 ---
-Using a photo as a background for a web page can look pretty good, but making that photo fill out the entire browser window no matter its size and proportions is not straight forward, if you also want to keep the photo in its original aspect ratio. Not clear what I mean -- check out the [demo page](/sites/default/files/node/29/auto-resize-background-image-demo.html) to see the effect in action (try resizing it).
+Using a photo as a background for a web page can look pretty good, but making that photo fill out the entire browser window no matter its size and proportions is not straight forward, if you also want to keep the photo in its original aspect ratio. Not clear what I mean -- check out the [demo page](/assets/auto-resize-background-image-demo.html) to see the effect in action (try resizing it).
 
-Some of the new [CSS3 tricks come pretty close]( http://www.css3.com/css3-background-size/), but they still seem to lack the ability to let the user expand the browser window in any direction and also keep the photos aspect ratio. If we also want a solution that works with older browsers (e.g. IE7/IE8), we need to go a different route.
+Some of the new [CSS3 tricks come pretty close](http://www.css3.com/css3-background-size/), but they still seem to lack the ability to let the user expand the browser window in any direction and also keep the photos aspect ratio. If we also want a solution that works with older browsers (e.g. IE7/IE8), we need to go a different route.
 
 ## jQuery to the rescue
 
@@ -73,6 +75,6 @@ Last we need the following JavaScript added to our page. The script makes sure t
 })(jQuery);
 ```
 
-If anybody has a way to improve on this, please post a comment. As far as I can see the code is pretty robust, but I have only tested in Chrome, Internet Explorer [7|8|9], Firefox 6, and Safari 5.1, so there might be issues I am not aware of.
+If anybody has a way to improve on this, please post a comment. As far as I can see the code is pretty robust, but I have only tested in Chrome, Internet Explorer 7/8/9, Firefox 6, and Safari 5.1, so there might be issues I am not aware of.
 
-Go to the [demo page](/sites/default/files/node/29/auto-resize-background-image-demo.html) check out the finished result.
+Go to the [demo page](/assets/auto-resize-background-image-demo.html) check out the finished result.

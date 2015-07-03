@@ -2,6 +2,8 @@
 layout: post
 title: 'CSS trick: Semi transparent CSS background that works in all browsers'
 created: 1319256718
+redirect_from:
+  - /2011/10/21/css-trick-semi-transparent-css-background-works-all-browsers
 ---
 This simple CSS class will create a semi transparent background, letting whatever is underneath the element shine through. It works across all browsers, that means Internet Explorer 6.0 as well. The newest browsers will use the `background:rgba(0,0,0,.75);` setting, the rest (IE6-IE8) will use the gradiant filter to achieve the same effect.
 

@@ -3,6 +3,8 @@ layout: post
 title: How to take control of style sheets in ASP.NET Themes with the StylePlaceholder
   and Style control
 created: 1228105462
+redirect_from:
+  - /2008/11/30/how-take-control-style-sheets-aspnet-themes-styleplaceholder-and-style-control
 ---
 The problem is pretty simple. When using ASP.NET Themes you do not have much say in how your style sheets are rendered to the page.
 

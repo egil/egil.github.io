@@ -2,6 +2,8 @@
 layout: post
 title: Nokia, please turn my f…ing volume back up again!
 created: 1362337841
+redirect_from:
+  - /2013/03/03/nokia-please-turn-my-f-ing-volume-back-again
 ---
 With the Windows Phone 7.8 update to my Nokia Lumia 800, Nokia suddenly decided that my hearing is precious and I am not able to take care of it myself... the [volume is now capped at half of what it was before](http://www.phonearena.com/news/Windows-Phone-7.8-update-causing-volume-problems-with-the-Nokia-Lumia-800_id39451). 
 
