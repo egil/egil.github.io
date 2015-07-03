@@ -3,7 +3,7 @@ layout: post
 title: Get background image to resize with browser window using CSS and jQuery
 created: 1319268101
 redirect_from:
-  - /2011/10/22/get-background-image-resize-browser-window-using-css-and-jquery
+  - /2011/10/22/get-background-image-resize-browser-window-using-css-and-jquery/
 ---
 Using a photo as a background for a web page can look pretty good, but making that photo fill out the entire browser window no matter its size and proportions is not straight forward, if you also want to keep the photo in its original aspect ratio. Not clear what I mean -- check out the [demo page](/assets/auto-resize-background-image-demo.html) to see the effect in action (try resizing it).
 

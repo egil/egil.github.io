@@ -3,8 +3,8 @@ layout: post
 title: Simply way of adding a default item to a data bound DropDownList
 created: 1217559949
 redirect_from:
-  - /2008/07/31/simply-way-of-adding-a-default-item-to-a-data-bound-dropdownlist
-  - /2008/07/31/simply-way-adding-default-item-data-bound-dropdownlist
+  - /2008/07/31/simply-way-of-adding-a-default-item-to-a-data-bound-dropdownlist/
+  - /2008/07/31/simply-way-adding-default-item-data-bound-dropdownlist/
 ---
 I have always found it too difficult to add a *"Choose xxxxx"* item to the top of a `DropDownList`, when the `DropDownList` binds to a `ObjectDataSource`, `SqlDataSource` or similar. I almost always ended up just feeding the `DropDownList` its content from the code behind, even though it felt like something that should be possible directly. The control do have a `AppendDataBoundItems` property, but most of the time you just end up with duplicated items.
 

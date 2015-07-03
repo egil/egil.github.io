@@ -4,7 +4,7 @@ title: Getting TypeScript, RequireJS, and Jasmine to play nice together in Visua
   Studio
 created: 1361118478
 redirect_from:
-  - /2013/02/17/getting-typescript-requirejs-and-jasmine-play-nice-together-visual-studio
+  - /2013/02/17/getting-typescript-requirejs-and-jasmine-play-nice-together-visual-studio/
 ---
 Getting [TypeScript](http://www.typescriptlang.org/), [RequireJS](http://requirejs.org/), and [Jasmine](http://pivotal.github.com/jasmine/) playing nicely together in Visual Studio turned out to be a bit harder than I had hoped.
 

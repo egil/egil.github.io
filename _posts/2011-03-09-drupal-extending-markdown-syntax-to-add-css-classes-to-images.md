@@ -3,7 +3,7 @@ layout: post
 title: 'Drupal: Extending Markdown syntax to add CSS classes to images'
 created: 1299657600
 redirect_from:
-  - /2011/03/09/drupal-extending-markdown-syntax-add-css-classes-images
+  - /2011/03/09/drupal-extending-markdown-syntax-add-css-classes-images/
 ---
 **Update June, 2013:** As pointed out by [Don Morris in the comments](http://egilhansen.com/2011/03/09/drupal-extending-markdown-syntax-add-css-classes-images#comment-920241107), PHP Markdown Extra now supports classes, making the below trick obsolete for this purpose.
 

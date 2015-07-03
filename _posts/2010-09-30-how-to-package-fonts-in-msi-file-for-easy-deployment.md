@@ -3,8 +3,8 @@ layout: post
 title: How to package fonts in .msi file for easy deployment
 created: 1285815920
 redirect_from:
-  - /2010/09/29/how-to-package-fonts-in-msi-file-for-easy-deployment
-  - /2010/09/29/how-package-fonts-msi-file-easy-deployment
+  - /2010/09/29/how-to-package-fonts-in-msi-file-for-easy-deployment/
+  - /2010/09/29/how-package-fonts-msi-file-easy-deployment/
 ---
 In this tutorial I will show you how to package custom font(s) into a Windows Installer .msi package for easy deployment to computers in a network through Active Directory. Alternatives is to use a VBscript solution or batch file solution, but I like this solution better as it allows me to deploy it through a AD group policy, it will automatically ensure that the fonts is only installed once, and should I ever want to remove the fonts from all the computers again, it is just a matter of updating my AD group policy. The Windows Installer technology handles the rest.
 

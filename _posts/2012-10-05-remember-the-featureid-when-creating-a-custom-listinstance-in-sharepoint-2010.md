@@ -3,7 +3,7 @@ layout: post
 title: Remember the FeatureId when creating a custom ListInstance in SharePoint 2010
 created: 1349456215
 redirect_from:
-  - /2012/10/05/remember-featureid-when-creating-custom-listinstance-sharepoint-2010
+  - /2012/10/05/remember-featureid-when-creating-custom-listinstance-sharepoint-2010/
 ---
 When creating a list instance manually in a SharePont 2010, it is important to remember to add the right `FeatureId` attribute to the [ListInstance]( http://msdn.microsoft.com/en-us/library/ms476062.aspx) element, if the `TemplateType` attribute points to a list template which is not in the same feature as the one you are creating the list instance in. If you forget, you will get some very vague error messages.
 

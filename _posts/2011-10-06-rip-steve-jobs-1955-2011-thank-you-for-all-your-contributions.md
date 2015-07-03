@@ -3,7 +3,7 @@ layout: post
 title: RIP Steve Jobs (1955 - 2011) – thank you for all your contributions
 created: 1317860479
 redirect_from:
-  - /2011/10/05/rip-steve-jobs-1955-2011-thank-you-all-your-contributions
+  - /2011/10/05/rip-steve-jobs-1955-2011-thank-you-all-your-contributions/
 ---
 It is not often I find myself struck by the passing of a public figure, but with Steve Jobs it is hard not to feel touched. The man who has had such a great influence on the tech industry and the world in general, leaves us with a large collection of important innovations and ideas, that will continue to inspire for many years to come.
 

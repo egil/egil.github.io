@@ -3,7 +3,7 @@ layout: post
 title: Simple Ping/Reply Service for Unit Testing AJAX/XHR requests
 created: 1284089210
 redirect_from:
-  - /2010/09/09/simple-ping-reply-service-unit-testing-ajax-xhr-requests
+  - /2010/09/09/simple-ping-reply-service-unit-testing-ajax-xhr-requests/
 ---
 To make it easier for me to unit test a [OData JavaScript library](http://github.com/egil/ODataJS) I am working, I created a small HTTP handler that will reply back to a AJAX request with the headers, HTTP verb and query string it received. My initial thought was to do this through a WCF service, and while this is certainly possible, I found it much easier just to create a simple HTTP handler.
 

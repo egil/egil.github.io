@@ -3,8 +3,8 @@ layout: post
 title: 'C#/.NET: Safe way to convert UTC time to local time when databinding'
 created: 1193646229
 redirect_from:
-  - /2007/10/29/safe-way-to-convert-utc-time-to-local-time-when-databinding
-  - /2011/09/27/safe-way-convert-utc-time-local-time-when-databinding
+  - /2007/10/29/safe-way-to-convert-utc-time-to-local-time-when-databinding/
+  - /2011/09/27/safe-way-convert-utc-time-local-time-when-databinding/
 ---
 After reading [Scott Mitchell's article Using Coordinated Universal Time (UTC) to Store Date/Time Values](http://aspnet.4guysfromrolla.com/articles/081507-1.aspx), I decided to do as he suggest and use UTC for a web application I'm building at work. All in all it is fairly easy to deal with UTC in the .NET Framwork. There is a [DateTime.UtcNow](http://msdn2.microsoft.com/en-us/library/system.datetime.utcnow.aspx) you can use instead of the regular DateTime.Now property, and there is a [DateTime.ToLocalTime](http://msdn2.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx) method that will convert your UTC DateTime value to the local server time zone, even taking daylight savings time in to consideration. When converting the other way, the [DateTime.ToUniversalTime](http://msdn2.microsoft.com/en-us/library/system.datetime.touniversaltime.aspx) method is provided.
 

@@ -3,7 +3,7 @@ layout: post
 title: 'How to: Different keyboard layout for each program in Windows 8'
 created: 1354363715
 redirect_from:
-  - /2012/12/01/how-different-keyboard-layout-each-program-windows-8
+  - /2012/12/01/how-different-keyboard-layout-each-program-windows-8/
 ---
 Here is a quick tip for all of us who write and program a lot in one language, e.g. English, but also write in one or more languages, in my case, Danish. It is easy to switch between installed keyboard layouts, just hit the `Windows Key + SPACE` (in Windows 7 it is `ALT + LEFT SHIFT`).
 

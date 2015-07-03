@@ -3,7 +3,7 @@ layout: post
 title: Design by Contract should become this decades TDD
 created: 1318572037
 redirect_from:
-  - /2011/10/13/design-contract-should-become-decades-tdd
+  - /2011/10/13/design-contract-should-become-decades-tdd/
 ---
 I am currently taking CSE 218 at UCSD, "Advanced Topics in Software Engineering - Methods and Tools for Software Modularity", where we recently read the paper ["Applying 'Design by Contract'"](http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=161279) by Bertrand Meyer. I already knew a little about the concept, and after reading that paper and playing with the concept in a micro project, I am sold.  I really think Design by Contract has a chance at being this decades TDD. It is pretty clear to me why it is a good idea to do "Contract First" development. Let me try to explain why.
 

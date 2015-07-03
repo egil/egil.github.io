@@ -4,8 +4,8 @@ title: Computer running slowly – it might not be Windows’ fault – it could
   your CPUs thermal protection
 created: 1353072808
 redirect_from:
-  - /2012/11/16/computer-running-slowly-it-might-not-be-windows-fault-it-could-just-your-cpus-thermal
-  - /2012/11/16/computer-running-slowly-it-might-not-be-windows-fault-it-could-just-be-your-cpus-thermal
+  - /2012/11/16/computer-running-slowly-it-might-not-be-windows-fault-it-could-just-your-cpus-thermal/
+  - /2012/11/16/computer-running-slowly-it-might-not-be-windows-fault-it-could-just-be-your-cpus-thermal/
 ---
 Conventional wisdom says that when a PC starts to run slowly and angry screaming at the computer screen ensues, it is time to reinstall Windows or remove some of the crap-ware that's been building up on the PC. However, it could be a hardware issue; it could be the computers cooling system that is unable to dissipate heat from the processor probably, causing the processors to lower its speed to 50% or more (see [Intel's description of this processor feature for more details](http://www.intel.com/cd/ids/developer/asmo-na/eng/downloads/54118.htm)).
 
