@@ -50,12 +50,13 @@ img {
 /**
  * Figures
  */
-figure > img {
+figure > a {
     display: block;
 }
 
 figcaption {
     font-size: $small-font-size;
+    padding: .5em 0;
 }
 
 
