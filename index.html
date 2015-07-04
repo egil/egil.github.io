@@ -22,7 +22,7 @@ layout: default
             {{ post.excerpt | number_of_words }} 
           {% endcapture %} 
           {% if excerpt_words != content_words %}
-            <a href="{{ post.url }}" title="Read more: {{ post.title }} ">Read more</a> - 
+            <a href="{{ post.url }}" title="Read more: {{ post.title }} ">Read more</a><!--  -  -->
           {% endif %}
 <!--           <a href="{{ post.url }}#disqus_thread" title="See comments">Comments</a> -->
         </p>
