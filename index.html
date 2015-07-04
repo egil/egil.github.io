@@ -22,9 +22,7 @@ layout: default
             {{ post.excerpt | number_of_words }} 
           {% endcapture %} 
           {% if excerpt_words != content_words %}
-            <a href="{{ post.url }}" title="Read more: {{ post.title }} ">Read more</a><!--  -  -->
-          {% endif %}
-<!--           <a href="{{ post.url }}#disqus_thread" title="See comments">Comments</a> -->
+            <a href="{{ post.url }}" title="Read more: {{ post.title }} ">Read more</a>&nbsp;-&nbsp;{% endif %}<a href="{{ post.url }}#disqus_thread" title="See comments">Comments</a>
         </p>
       </li>
     {% endfor %}
@@ -42,14 +40,12 @@ layout: default
 
 </div>
 <script type="text/javascript">
-    // /* * * CONFIGURATION VARIABLES * * */
-    // var disqus_shortname = 'egilhansen';
-
-    // /* * * DON'T EDIT BELOW THIS LINE * * */
-    // (function () {
-    //     var s = document.createElement('script'); s.async = true;
-    //     s.type = 'text/javascript';
-    //     s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    //     (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    // }());
+    var disqus_shortname = 'egilhansen';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
 </script>
