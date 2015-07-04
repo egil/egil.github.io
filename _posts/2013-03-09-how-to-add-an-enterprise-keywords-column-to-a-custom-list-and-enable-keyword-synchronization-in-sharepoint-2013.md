@@ -192,7 +192,7 @@ Aside: I like to add event receivers beneath the list they are associated with s
 </Receiver>
 ```
 
-The important thing to make sure is that the value of the `ListTemplateId` attribute on the `<Receivers ListTemplateId="xxxxx"> ... </Receivers>` tag is the same as the value of the ` Type="xxxxx"` attribute on the `< ListTemplate ... />` tag. Otherwise the event receivers will not attach to the right list.
+The important thing to make sure is that the value of the `ListTemplateId` attribute on the `<Receivers ListTemplateId="xxxxx"> ... </Receivers>` tag is the same as the value of the `Type="xxxxx"` attribute on the `< ListTemplate ... />` tag. Otherwise the event receivers will not attach to the right list.
 
 That is it. If you need a guide for SharePoint 2010, please take a look at this [blog post over at metaengine.com](http://www.metaengine.com/2012/03/SharePoint-sandbox-solution---Document-Library-with-Enterprise-Keywords). It helped me get this working in SharePoint 2013.
 
