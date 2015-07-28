@@ -13,15 +13,21 @@ The suggested solution on TechNet is to change registry key to increase the numb
 My solution is based on using the Script Component instead of the Excel data source. It allows you to define the column type and their size/length, and if you have choose your types and length right, the solution should be stable.
 
 ## Solution
+To help guide us through the solution, we will use this very simple Excel spreadsheet as our example:
+
+![](/assets/ssis-excel-import-sample-sheet.png)
+
 1. Add an Excel Connection Manager to the package
 
 2. Add a Script Component as a Source and open the Script Component editor (Script Transformation Editor)
 
   1. Add your Excel Connection Manager in the "Connection Managers" tab. Make sure to name it `DataSourceConnection`, we will use that name in the script code later.
   ![](/assets/ssis-excel-import-script-component-connection-manager.png)
-  2. In the "Inputs and Outputs" tab, first rename the default "Output 0" to the name of the sheet in your Excel spreadsheet. Then continue adding the columns you want to export to the output, giving each column the same exact name it has in the spreadsheet, and the desired type.
+  2. In the "Inputs and Outputs" tab, first rename the default "Output 0" to the *exact name* of the sheet in your Excel spreadsheet you want to import data from.
+  3. Then continue adding the columns you want to export to the output, also naming each column with the *exact name* it has in the spreadsheet and pick the desired type. 
+  **Note:** The names of the columns and sheet has to be the same since we use them to automatically generate the OleDB select statement that will read the data from the spread sheet.
   ![](/assets/ssis-excel-import-script-component-input-output.png)
-  3. Go to the Script tab and click the "Edit Script..." button. This will open a new instance of Visual Studio.
+  4. Go to the Script tab and click the "Edit Script..." button. This will open a new instance of Visual Studio.
 
 3. In the Visual Studio script edit, make the following changes to the script file:
 
