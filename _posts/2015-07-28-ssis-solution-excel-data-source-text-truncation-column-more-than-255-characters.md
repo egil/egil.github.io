@@ -10,22 +10,23 @@ The obvious problem is that if the 10. row in the spreadsheet is longer than 255
 
 The suggested solution on TechNet is to change registry key to increase the number of rows the Excel data source will sample, and other suggestions online include changing the spreadsheet to have a larger row in the top 8 rows. However, neither solution is stable if you cannot change spreadsheet and if the spreadsheet changes each time you execute your SSIS package.
 
-My solution is based on using the Script Component instead of the Excel data source. It allows you to define the column type and their size/length, and if you have choose your types and length right, the solution should be stable.
+My solution is based on using the Script Component instead of the Excel data source. It allows you to define the column type and their size/length, and if you have choose your types and length right, the solution should be stable. The only other requirement is that there is a header row in the sheet you are trying to import from.
 
 ## Solution
 To help guide us through the solution, we will use this very simple Excel spreadsheet as our example:
 
 ![](/assets/ssis-excel-import-sample-sheet.png)
 
-1. Add an Excel Connection Manager to the package
+1. Add an Excel Connection Manager to the package as you normally would. Point it to your source file, choose an Excel version, and check the "First row has column names" checkbox.  
+   **Note:** This particular solution assums the first row in the Excel spreadsheet is a header row. This solution can be modified to work without, but not without changes to the script code. 
 
 2. Add a Script Component as a Source and open the Script Component editor (Script Transformation Editor)
 
   1. Add your Excel Connection Manager in the "Connection Managers" tab. Make sure to name it `DataSourceConnection`, we will use that name in the script code later.
-  ![](/assets/ssis-excel-import-script-component-connection-manager.png)
+  ![](/assets/ssis-excel-import-script-component-connection-manager.png)  
   2. In the "Inputs and Outputs" tab, first rename the default "Output 0" to the *exact name* of the sheet in your Excel spreadsheet you want to import data from.
-  3. Then continue adding the columns you want to export to the output, also naming each column with the *exact name* it has in the spreadsheet and pick the desired type. 
-  **Note:** The names of the columns and sheet has to be the same since we use them to automatically generate the OleDB select statement that will read the data from the spread sheet.
+  3. Then continue adding the columns you want to export to the output, also naming each column with the *exact name* it has in the spreadsheet and pick the desired type.  
+  **Note:** The names of the columns and sheet has to be the same since we use them to automatically generate the OleDB select statement that will read the data from the spread sheet.  
   ![](/assets/ssis-excel-import-script-component-input-output.png)
   4. Go to the Script tab and click the "Edit Script..." button. This will open a new instance of Visual Studio.
 
