@@ -6,7 +6,7 @@ When using SQL Server Integration Service (SSIS) Excel data source to import tex
 
 <!--break-->
 
-The obvious problem is that if the 10. row in the spreadsheet is longer than 255 characters, the import will break with the error message: **"Text was truncated or one or more characters had no match in the target code page."**
+The obvious problem is that if any row after 9th row is longer than 255 characters, the import will break with the error message: **"Text was truncated or one or more characters had no match in the target code page."**
 
 The suggested solution on TechNet is to change registry key to increase the number of rows the Excel data source will sample, and other suggestions online include changing the spreadsheet to have a larger row in the top 8 rows. However, neither solution is stable if you cannot change spreadsheet and if the spreadsheet changes each time you execute your SSIS package.
 
