@@ -6,9 +6,11 @@ If you use the Lookup Transform to perform lookups with columns that can be NULL
 
 So how do we make the Lookup Transform match as expected when source column and lookup column can be NULL? We use [ISNULL](https://msdn.microsoft.com/en-us/library/ms184325.aspx) function, partial caching and a custom query in the Lookup Transform. 
 
+<!--break-->
+
 Let us look at a quick example. This is our lookup table definition, which allows NULLs in the LastName column, that we want to get the Id of a person from, based on their first and last name:
 
-```SQL
+```TSQL
 CREATE TABLE Person (
   Id int IDENTITY(1,1) NOT NULL,
   FirstName varchar(50) NOT NULL,
@@ -21,7 +23,7 @@ To find the `Id` of each name, we add a Lookup Transform to the Data Flow Task, 
 
 Until now, every step has been the same as with *Full caching*. However, now we continue to the *Advanced* tab and check the **Modify the SQL statement* checkbox and change the SQL like so:
 
-```SQL
+```TSQL
 select * from (select * from [Person]) [refTable]
 where [refTable].[FirstName] = ? and ISNULL([refTable].[LastName], '') = ISNULL(?, '')
 ```
