@@ -1,7 +1,6 @@
 ---
 title: 'SSIS: Lookup Transform not finding expected match with NULL values'
 layout: post
-published: false
 ---
 If you use the Lookup Transform to perform lookups with columns that can be NULL, the Lookup Transform will fail to find expected matches because in a database world, [NULL does not equal NULL](http://stackoverflow.com/questions/1843451/why-does-null-null-evaluate-to-false-in-sql-server#answer-1843460).
 
