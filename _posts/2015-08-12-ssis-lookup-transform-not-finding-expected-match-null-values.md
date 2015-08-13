@@ -32,4 +32,4 @@ With the help of the `ISNULL` function, we rewrite any NULL values to an empty s
 
 Last step is to click the *Parameters* button and assign the parameters.
 
-Hope this helps!
+Hope this help!
