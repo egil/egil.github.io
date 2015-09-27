@@ -26,4 +26,3 @@ paginate_path: "posts/:num"
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
-  

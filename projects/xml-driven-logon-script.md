@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: XML Driven Logon Script
 permalink: /projects/xml-driven-logon-script/
 redirect_from:
