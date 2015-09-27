@@ -1,8 +1,9 @@
 ---
 title: uVis.web
-published: 2013-08-02 07:52:20
+layout: project
+permalink: /projects/uvis-web/
 ---
 This was my thesis project, done at the IT University of Copenhagen.
 
-- [Report](http://dl.egilhansen.com/uVis.web-Report.pdf)
+- [Report](http://egilhansen.com/projects/uvis-web-report.pdf)
 - [Source code](https://github.com/egil/uVis.web)
