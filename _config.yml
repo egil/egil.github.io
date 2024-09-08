@@ -2,7 +2,7 @@
 title: Egil Hansen's .com
 email: egil@egilhansen.com
 description: >
-  Distinguished Developer at delegate.dk, Microsoft MVP and creator of http://bUnit.dev
+  Distinguished Developer at Delegate, Microsoft MVP, international speaker, and creator of bUnit. Dane living in Iceland.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://egilhansen.com" # the base hostname & protocol for your site
@@ -12,7 +12,7 @@ twitter_username: egilhansen
 github_username: egil
 
 # Build settings
-timezone: Europe/Copenhagen
+timezone: Europe/Reykjavik
 markdown: kramdown
 
 kramdown:
